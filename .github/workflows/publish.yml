@@ -22,13 +22,13 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Restore dependencies
-        run: dotnet restore KyleMcMaster.Card.csproj
+        run: dotnet restore KyleMcMaster.Card/KyleMcMaster.Card.csproj
 
       - name: Build
-        run: dotnet build KyleMcMaster.Card.csproj --configuration Release --no-restore
+        run: dotnet build KyleMcMaster.Card/KyleMcMaster.Card.csproj --configuration Release --no-restore
 
       - name: Pack
-        run: dotnet pack KyleMcMaster.Card.csproj --configuration Release --no-build --no-restore --output "${{ env.PACK_OUTPUT }}"
+        run: dotnet pack KyleMcMaster.Card/KyleMcMaster.Card.csproj --configuration Release --no-build --no-restore --output "${{ env.PACK_OUTPUT }}"
 
       # Get a short-lived NuGet API key
       - name: NuGet login (OIDC → temp API key)
