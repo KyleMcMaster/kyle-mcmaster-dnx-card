@@ -28,7 +28,7 @@ jobs:
         run: dotnet build KyleMcMaster.Card/KyleMcMaster.Card.csproj --configuration Release --no-restore
 
       - name: Pack
-        run: dotnet pack KyleMcMaster.Card/KyleMcMaster.Card.csproj --configuration Release --no-build --no-restore --output "${{ env.PACK_OUTPUT }}"
+        run: dotnet pack KyleMcMaster.Card/KyleMcMaster.Card.csproj --configuration Release --no-build --no-restore --output "artifacts"
 
       # Get a short-lived NuGet API key
       - name: NuGet login (OIDC → temp API key)
