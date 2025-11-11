@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>kylemcmaster</ToolCommandName>
+    <Authors>Kyle McMaster</Authors>
+    <Description>
+      Business card for Kyle McMaster
+    </Description>
+    <RepositoryUrl>https://github.com/kylemcmaster/kyle-mcmaster-dnx-card</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Version>0.1.0</Version>
+    <ReleaseNotes>Initial release</ReleaseNotes>
+    <PackageId>kylemcmaster</PackageId>
+    <PackageProjectUrl>https://github.com/kylemcmaster/kyle-mcmaster-dnx-card</PackageProjectUrl>
+    <PackageTags>dotnet;dotnet-tool;business-card;dnx</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>https://github.com/KyleMcMaster/kyle-mcmaster-dnx-card/releases</PackageReleaseNotes>
+  </PropertyGroup>
+
+</Project>
