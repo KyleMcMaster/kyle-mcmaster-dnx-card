@@ -11,7 +11,7 @@
     <RepositoryUrl>https://github.com/kylemcmaster/kyle-mcmaster-dnx-card</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Version>0.1.0</Version>
-    <ReleaseNotes>Initial release</ReleaseNotes>
+    <ReleaseNotes>Content updates with social and website links</ReleaseNotes>
     <PackageId>kylemcmaster</PackageId>
     <PackageProjectUrl>https://github.com/kylemcmaster/kyle-mcmaster-dnx-card</PackageProjectUrl>
     <PackageTags>dotnet;dotnet-tool;business-card;dnx</PackageTags>
