@@ -10,7 +10,7 @@
     </Description>
     <RepositoryUrl>https://github.com/kylemcmaster/kyle-mcmaster-dnx-card</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
     <ReleaseNotes>Content updates with social and website links</ReleaseNotes>
     <PackageId>kylemcmaster</PackageId>
     <PackageProjectUrl>https://github.com/kylemcmaster/kyle-mcmaster-dnx-card</PackageProjectUrl>
