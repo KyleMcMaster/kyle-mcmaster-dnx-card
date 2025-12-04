@@ -1,46 +1,46 @@
-﻿using Spectre.Console;
+﻿using TimeWarp.Nuru;
 
 // Basic profile data for Kyle McMaster
-var name = "Kyle McMaster";
-var title = "Software Engineer & .NET Enthusiast 💻";
-var location = "Cleveland, Ohio, USA 🌆";
+string name = "Kyle McMaster";
+string title = "Software Engineer & .NET Enthusiast 💻";
+string location = "Cleveland, Ohio, USA 🌆";
 
 // Social links – tweak these as needed
-var website = "https://kylemcmaster.com";
-var github = "https://github.com/kylemcmaster";
-var linkedin = "https://www.linkedin.com/in/kylerobertmcmaster";
-var twitter = "https://x.com/kylemcmaster";
-var bluesky = "https://bsky.app/profile/kylemcmaster.com";
+string website = "https://kylemcmaster.com";
+string github = "https://github.com/kylemcmaster";
+string linkedin = "https://www.linkedin.com/in/kylerobertmcmaster";
+string twitter = "https://x.com/kylemcmaster";
+string bluesky = "https://bsky.app/profile/kylemcmaster.com";
+// Create terminal instance
+var terminal = NuruTerminal.Default;
 
-AnsiConsole.Clear();
+string header = $"Hi, I'm {name}! 👋".BrightBlue();
 
-// Header
-var rule = new Rule($"[bold dodgerblue2]Hi, I'm {name}! 👋[/]")
-{
-	Style = Style.Parse("grey50")
-};
+// Header panel
+terminal.WritePanel(panel => panel
+  .Content(header.White().Bold())
+  .Border(BorderStyle.None)
+  .Padding(2, 1));
 
-AnsiConsole.Write(rule);
-AnsiConsole.WriteLine();
+terminal.WriteLine();
 
-// Create a panel that acts like a business card
-var card = new Panel(
-		new Markup($"[bold white]{title}[/]\n[grey70]{location}[/]\n\n" +
-			   $"[bold yellow]Website 🌐[/]: [link={website}]{website}[/]\n" +
-			   $"[bold yellow]GitHub 🧑‍💻[/]: [link={github}]{github}[/]\n" +
-			   $"[bold yellow]LinkedIn 💼[/]: [link={linkedin}]{linkedin}[/]\n" +
-			   $"[bold yellow]X (Twitter) 🐦[/]: [link={twitter}]{twitter}[/]\n" +
-			   $"[bold yellow]Bluesky 🦋[/]: [link={bluesky}]{bluesky}[/]")
-	)
-{
-	Border = BoxBorder.Rounded,
-	BorderStyle = new Style(Color.DodgerBlue2),
-	Padding = new Padding(2, 1),
-	Header = new PanelHeader("[bold dodgerblue2]Digital Business Card[/]", Justify.Center)
-};
+string body = title.White().Bold() + "\n" +
+  location.Gray() + "\n\n" +
+  "Website 🌐".Link(website).Yellow().Bold() + $": {website}" + "\n" +
+  "GitHub 🧑‍💻".Link(github).Yellow().Bold() + $": {github}" + "\n" +
+  "LinkedIn 💼".Link(linkedin).Yellow().Bold() + $": {linkedin}" + "\n" +
+  "X (Twitter) 🐦".Link(twitter).Yellow().Bold() + $": {twitter}" + "\n" +
+  "Bluesky 🦋".Link(bluesky).Yellow().Bold() + $": {bluesky}";
 
-AnsiConsole.Write(card);
-AnsiConsole.WriteLine();
+// Business card panel
+terminal.WritePanel(panel => panel
+  .Header("Digital Business Card".BrightBlue().Bold())
+  .Content(body)
+  .Border(BorderStyle.Rounded)
+  .BorderColor("\x1b[34m")
+  .Padding(2, 1));
+
+terminal.WriteLine();
 
 // A short closing note
-AnsiConsole.MarkupLine("[grey70]Thanks for stopping by! ✨ Feel free to reach out on any of the links above.[/]");
+terminal.WriteLine("Thanks for stopping by! ✨ Feel free to reach out on any of the links above.".Gray());
