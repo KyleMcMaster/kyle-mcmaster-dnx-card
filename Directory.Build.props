@@ -10,8 +10,8 @@
     </Description>
     <RepositoryUrl>https://github.com/kylemcmaster/kyle-mcmaster-dnx-card</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>0.3.0</Version>
-    <ReleaseNotes>Migrate from Spectre.Console to TimeWarp.Nuru</ReleaseNotes>
+    <Version>0.4.0</Version>
+    <ReleaseNotes>Refactor to Nuru Endpoint DSL with `about` and `contact` subcommands; upgrade TimeWarp.Nuru to 3.0.0-beta.50; add shoutout to TimeWarp.Nuru</ReleaseNotes>
     <PackageId>kylemcmaster</PackageId>
     <PackageProjectUrl>https://github.com/kylemcmaster/kyle-mcmaster-dnx-card</PackageProjectUrl>
     <PackageTags>dotnet;dotnet-tool;business-card;dnx</PackageTags>
